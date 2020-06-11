@@ -11,7 +11,7 @@ const {
   GraphQLString,
 } = graphql;
 
-const { ADD_ITEM, GET_ITEM } = require("./todoItem");
+const { ADD_ITEM, GET_ITEM, EDIT_USER, DELETE_ITEM } = require("./todoItem");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
@@ -23,6 +23,8 @@ const Mutation = new GraphQLObjectType({
   name: "Mutation",
   fields: {
     ADD_ITEM,
+    EDIT_USER,
+    DELETE_ITEM,
   },
 });
 
